@@ -1,26 +1,3 @@
-# Write your sql queries in this file in the appropriate method like the example below:
-#
-# def select_category_from_projects
-# "SELECT category FROM projects;"
-# end
-
-# Make sure each ruby method returns a string containing a valid SQL statement.
-
-# CREATE TABLE projects (
-#   id INTEGER PRIMARY KEY,
-#   title TEXT,
-#   category INTEGER,
-#   funding_goal INTEGER,
-#   start_date TEXT,
-#   end_date TEXT
-# );
-#
-# CREATE TABLE users (
-#   id INTEGER PRIMARY KEY,
-#   name TEXT,
-#   age INTEGER
-# );
-
 
 def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_name
   "SELECT projects.title, SUM(pledges.amount) FROM projects JOIN pledges ON projects.id = pledges.project_id GROUP BY projects.title"
